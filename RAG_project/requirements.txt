@@ -1,0 +1,10 @@
+langchain
+sentence-transformers
+faiss-cpu
+huggingface_hub
+transformers
+torch
+tqdm
+numpy
+
+pip install -r requirements.txt
