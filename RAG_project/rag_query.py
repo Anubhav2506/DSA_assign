@@ -37,7 +37,7 @@ def main():
     )
 
     # 5. Query loop
-    print("🎙️  Enter ’exit’ or ’quit’ to stop.")
+    print("Enter ’exit’ or ’quit’ to stop.")
     while True:
         user_q = input("\nEnter your question: ").strip()
         if user_q.lower() in ["exit", "quit"]:
@@ -47,14 +47,14 @@ def main():
         answer = result["result"]
         source_docs = result["source_documents"]
 
-        print("\n🗒️  Answer:\n", answer)
-        print("\n🔍  Top retrieved chunks (metadata + snippet):")
+        print("\nAnswer:\n", answer)
+        print("\nTop retrieved chunks (metadata + snippet):")
         for doc in source_docs:
             meta = doc.metadata
             snippet = doc.page_content[:200].replace("\n", " ") + "..."
             print(f" • [DocID={meta['doc_id']} | chunk={meta['chunk_id']}]  {snippet}")
 
-    print("👋  Goodbye!")
+    print("Goodbye!")
 
 if __name__ == "__main__":
     main()
